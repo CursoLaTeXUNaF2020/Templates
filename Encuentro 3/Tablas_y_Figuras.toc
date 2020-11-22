@@ -1,0 +1,8 @@
+\babel@toc {spanish}{}
+\beamer@sectionintoc {1}{Introducción.}{8}{0}{1}
+\beamer@sectionintoc {2}{Insertando tablas y figuras.}{8}{0}{2}
+\beamer@sectionintoc {3}{Objetos flotantes.}{8}{0}{3}
+\beamer@sectionintoc {4}{Color en tablas.}{8}{0}{4}
+\beamer@sectionintoc {5}{Rotación de texto en celdas.}{8}{0}{5}
+\beamer@sectionintoc {6}{Ancho de columnas.}{8}{0}{6}
+\beamer@sectionintoc {7}{Compilando figuras en \LaTeX {}.}{8}{0}{7}

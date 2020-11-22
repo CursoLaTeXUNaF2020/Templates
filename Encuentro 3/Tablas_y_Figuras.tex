@@ -1,12 +1,114 @@
-\documentclass[10pt,a4paper]{beamer}
+\documentclass[11pt]{beamer}
 \usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
 \usepackage[T1]{fontenc}
+\usepackage{lmodern}
 \usepackage{amsmath}
+\usepackage{amscd}
 \usepackage{amsfonts}
 \usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{amsthm}
+\usepackage{float}
+\usepackage[scriptsize]{subfigure}
+\usepackage{caption}
+\setbeamertemplate{caption}[numbered]
+\usepackage{tikz}
 \usepackage{graphicx}
-\author{Ferreira Juan David}
-\title{Inserción de Tblas y Figuras}
+\usepackage{eso-pic}
+\usepackage{multicol}
+\usepackage{multirow}
+\usetheme{Madrid}
+
+\theoremstyle{plain} % default
+\newtheorem{thm}{Teorema:}
+\newtheorem{prop}{Proposición:}
+\newtheorem{lem}{Lema:}
+\newtheorem{pro}{Demostración:}
+
+\theoremstyle{definition}
+\newtheorem{defi}{Definición:}
+\newtheorem{exa}{Ejemplo:}
+
+
 \begin{document}
+	%\author{Ferreira, Juan David }
+	\title{Figuras y Tablas}
+	%\subtitle{}
+	%\logo{}
+	%\institute{}
+	%\date{}
+	%\subject{}
+	%\setbeamercovered{transparent}
+	%\setbeamertemplate{navigation symbols}{}
+	\begin{frame}[plain]
+		\maketitle
+	\end{frame}
+
+    \begin{frame}
+    	\frametitle{Contenidos}
+    	\tableofcontents[pausesections]
+    \end{frame}
+    \section[Introducción]{Introducción.}
+    \section[Insertando tablas y figuras]{Insertando tablas y figuras.}
+    \section[Objetos flotantes]{Objetos flotantes.}
+    \section[Color en tablas]{Color en tablas.}
+    \section[Rotación de texto en celdas]{Rotación de texto en celdas.}
+    \section[Ancho de columnas]{Ancho de columnas.}
+    \section[Compilando figuras en \LaTeX{}]{Compilando figuras en \LaTeX{}.}
+     %%  ========================================================================================================================================================== %%
+    \begin{frame}
+    	\frametitle{Movimientos de Reidemeister}
+    	Los movimientos de Reidemeister $\mathcal{R}_{1}$, $\mathcal{R}_{2}$ y $\mathcal{R}_{3}$ son de mucha utilidad para comprender ciertos estudios sobre isotopías de ambiente e isotopías regulares como relación de equivalencia (solamente) generadas por los movimientos $\mathcal{R}_{2}$ y $\mathcal{R}_{3}$.
+    	\vspace{0.2cm}
+    	\begin{figure}[H]
+    		\centering
+    		\begin{tikzpicture}[scale=0.35]
+    		\node (a) at (-2, 1.5) {{\large $\mathcal{R}_{1}.$}};                                                                                           % rama derecha
+    		\node[yshift=-1.4cm] (b) at (-2, 1.5) {{\large $\mathcal{R}_{2}.$}};                                                                                      % rama derecha
+    		\node[yshift=-2.8cm] (c) at (-2, 1.5) {{\large $\mathcal{R}_{3}.$}};                                                                                      % rama derecha
+    		\draw[white,white,double=black,ultra thick,double distance=1.25pt] (0,3)      .. controls (1.5,3)    and (2.5,3)    ..                           %
+    		(2.5,1.5)  .. controls (2.5, 0.5) and (1.5, 0.5) ..                           %
+    		(1.5, 1.5) .. controls (1.5, 3)   and (3.5, 3)   ..  (4,3);                   % rama derecha
+    		\draw[white,white,double=black,ultra thick,double distance=1.25pt] (1.5, 1.5) .. controls (1.5, 3) and (3.5, 3) .. (4,3);                        % rama derecha
+    		%%   ==========================================================================================================================================  %%%%%%%%%%%%%%%%%%%
+    		\node[xshift=1.7cm] (d) at (0, 1.5) {{\large $=$}};
+    		\node[xshift=7cm] (d) at (0, 1.5) {{\large $;$}};                                                                                                % 
+    		\draw[xshift=7cm,white,double=black,thick,double distance=1pt] (0,1.75) .. controls (1,2.5) and (3,2.75) .. (4,2);                               %
+    		%%   ==========================================================================================================================================  %%%%%%%%%%%%%%%%%%%
+    		\node[xshift=4.5cm] (e) at (0, 1.5) {{\large $=$}};                                                                                              %
+    		\draw[xshift=14cm,white,white,double=black,ultra thick,double distance=1.25pt] (0,3)      .. controls (1.5,3)    and (2.5,3)    ..               % rama derecha
+    		(2.5,1.5)  .. controls (2.5, 0.5) and (1.5, 0.5) ..               % rama derecha
+    		(1.5, 1.5) .. controls (1.5, 3)   and (3.5, 3)   .. (4,3);        % rama derecha
+    		\draw[xshift=14cm,white,white,double=black,ultra thick,double distance=1.25pt] (0,3) .. controls (1.5,3) and (2.5,3) .. (2.5,1.5);               % 
+    		%%   ==========================================================================================================================================  %%%%%%%%%%%%%%%%%%%
+    		\draw[yshift=-4cm,white,double=black,ultra thick,double distance=1pt] (3,0) .. controls (0,1.5) .. (3,3);                                        % rama derecha
+    		\draw[yshift=-4cm,white,double=black,ultra thick,double distance=1pt] (0,0) .. controls (3,1.5) .. (0,3);                                        % rama izquierda
+    		\node[xshift=1.7cm,yshift=-1.4cm] (f) at (0, 1.5) {{\large $=$}}; 
+    		\node[xshift=5cm,yshift=-1.4cm] (g) at (0, 1.5) {{\large $;$}};                                                                               %
+    		\draw[xshift=10cm,yshift=-4cm,white,double=black,ultra thick,double distance=1pt] (3,0) .. controls (0,1.5) .. (3,3);                            % rama derecha
+    		\draw[xshift=7cm,yshift=-4cm,white,double=black,ultra thick,double distance=1pt] (0,0) .. controls (3,1.5) .. (0,3);                             % rama izquierda
+    		%%   ==========================================================================================================================================  %%%%%%%%%%%%%%%%%%%
+    		\draw[yshift=-8cm,white,white,double=black,ultra thick,double distance=1pt] (0,1.75) .. controls (1,2.5) and (3,2.75) .. (4,2);                  % rama derecha
+    		\draw[yshift=-8cm,white,white,double=black,ultra thick,double distance=1pt] (0,3) .. controls (1.75, 1.25) and (2.25, 0.75) .. (4,0);            % rama izquierda
+    		\draw[yshift=-8cm,white,white,double=black,ultra thick,double distance=1pt] (0,0) .. controls (1.75, 1.25) and (2.25, 0.75) .. (4,3);            % 
+    		\node[xshift=1.7cm,yshift=-2.8cm] (g) at (0, 1.5) {{\large $=$}};                                                                               %
+    		\draw[xshift=6cm,yshift=-8.5cm,white,double=black,ultra thick,double distance=1pt] (0,1.25) .. controls (1,0.5) and (3,0.25) .. (4,1);           % rama derecha
+    		\draw[xshift=6cm,yshift=-8cm,white,double=black,ultra thick,double distance=1pt] (0,3) .. controls (1.75, 1.25) and (2.25, 0.75) .. (4,0);       % rama izquierda
+    		\draw[xshift=6cm,yshift=-8cm,white,double=black,ultra thick,double distance=1pt] (0,0) .. controls (1.75, 1.25) and (2.25, 0.75) .. (4,3);       % 
+    		%%   ==========================================================================================================================================  %%%%%%%%%%%%%%%%%%%
+    		\draw[xshift=14cm,yshift=-8cm,white,white,double=black,ultra thick,double distance=1pt] (0,1.75) .. controls (1,2.5) and (3,2.75) .. (4,2);      % rama derecha
+    		\draw[xshift=14cm,yshift=-8cm,white,white,double=black,ultra thick,double distance=1pt] (0,0) .. controls (1.75, 1.25) and (2.25, 0.75) .. (4,3);%
+    		\draw[xshift=14cm,yshift=-8cm,white,white,double=black,ultra thick,double distance=1pt] (0,3) .. controls (1.75, 1.25) and (2.25, 0.75) .. (4,0);% rama izquierda
+    		\node[xshift=6.7cm,yshift=-2.8cm] (g) at (0, 1.5) {{\large $=$}};
+    		\node[xshift=4.2cm,yshift=-2.8cm] (g) at (0, 1.5) {{\large $;$}};                                                                                %
+    		\draw[xshift=20cm,yshift=-8.5cm,white,double=black,ultra thick,double distance=1pt] (0,1.25) .. controls (1,0.5) and (3,0.25) .. (4,1);          % rama derecha
+    		\draw[xshift=20cm,yshift=-8cm,white,double=black,ultra thick,double distance=1pt] (0,0) .. controls (1.75, 1.25) and (2.25, 0.75) .. (4,3);      %
+    		\draw[xshift=20cm,yshift=-8cm,white,double=black,ultra thick,double distance=1pt] (0,3) .. controls (1.75, 1.25) and (2.25, 0.75) .. (4,0);      % rama izquierda
+    		\end{tikzpicture}
+    		\caption{Movimientos de Reidemeister}	
+    	\end{figure}
+    \end{frame}
+    %----------------------------------------------------------------- DEFINICIÓN -------------------------------------------------------------------------------- %
 	
 \end{document}
