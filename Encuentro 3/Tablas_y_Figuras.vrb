@@ -1,0 +1,3 @@
+\frametitle{Fusión de filas y columnas de tablas}
+    	
+    	Al presentar diferentes tipos de información en una tabla, a menudo se requiere que algunas celdas se combinen en una sola. Los paquetes \textcolor{red}{\texttt{multicolum}}y \textcolor{red}{\texttt{multirow}} proporcionan los comandos {\color{blue}{\verb|\multicolumn{}{}{}|}} y {\color{blue}{\verb|\multirow{}{}{}|}} para fusionar dos o más columnas y filas, respectivamente.
